@@ -1,0 +1,4 @@
+version: '2'
+services:
+  qingcloud-shell:
+    image: docker.io/radondb/radondb-shell:10

@@ -101,7 +101,7 @@ spec:
           lifecycle:
             preStop:
               exec:
-                command: ["/bin/sh","-c","/pre-stop.sh; while [ $(pgrep -f /opt/bitnami/postgresql/bin/postgres) ] ;  do sleep 1 ; done"]
+                command: ["/bin/sh","-c","/pre-stop.sh; while [ $(pgrep -f /opt/qingdloud/postgresql/bin/postgres) ] ;  do sleep 1 ; done"]
           {{- end }}
           {{- if .Values.postgresql.command }}
           command: {{- include "common.tplvalues.render" (dict "value" .Values.postgresql.command "context" $) | nindent 12 }}
